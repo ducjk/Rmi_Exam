@@ -4,10 +4,13 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/MyClient.java</file>
-            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/rmi_exam/Rmi_exam.java</file>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/TinhToan.java</file>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/ITinhToan.java</file>
+            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/bean/taikhoanbean.java</file>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/MyServer.java</file>
+            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/bean/chitiettaikhoanbean.java</file>
+            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/dao/KetNoi.java</file>
+            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/dao/taikhoandao.java</file>
         </group>
     </open-files>
 </project-private>
