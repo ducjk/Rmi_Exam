@@ -1,4 +1,5 @@
 
+import dao.KetNoi;
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.server.UnicastRemoteObject;
@@ -6,6 +7,8 @@ import java.rmi.server.UnicastRemoteObject;
 public class MyServer {
     public static void main(String[] args) {
         try{
+            KetNoi kn = new KetNoi();
+            kn.KetNoi();
             LocateRegistry.createRegistry(1099);
             TinhToan tt= new TinhToan();
          //Quang ba doi tuong tt de may khach co the goi phuong thuc trong tt

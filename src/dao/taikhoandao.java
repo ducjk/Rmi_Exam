@@ -19,11 +19,10 @@ public class taikhoandao {
         try {
             ArrayList<taikhoanbean> dstaikhoan= new ArrayList<taikhoanbean>();
 //			   b1: ket noi vao csdl
-            KetNoi kn = new KetNoi();
-            kn.KetNoi();
+            
 //			   b2: Lay du lieu ve
             String sql = "select * from taikhoan";
-	    PreparedStatement cmd = kn.cn.prepareStatement(sql);
+	    PreparedStatement cmd = KetNoi.cn.prepareStatement(sql);
 	    ResultSet rs = cmd.executeQuery();
             while(rs.next()) {
                 String SoTaiKhoan = rs.getString("SoTaiKhoan");
@@ -34,7 +33,6 @@ public class taikhoandao {
             }
             
             rs.close();
-            kn.cn.close();
 			   
             return dstaikhoan;
 	} catch (Exception e) {
@@ -43,4 +41,32 @@ public class taikhoandao {
             return null;
 	}
     }
+    
+    public taikhoanbean ktdn(String taikhoan, String matkhau){
+        try {
+//			   b2: Lay du lieu ve
+            String sql = "select * from taikhoan where SoTaiKhoan = ? and MatKhau = ?";
+	    PreparedStatement cmd = KetNoi.cn.prepareStatement(sql);
+	    cmd.setString(1, taikhoan);
+            cmd.setString(2, matkhau);
+            ResultSet rs = cmd.executeQuery();
+            taikhoanbean tk = new taikhoanbean();
+            if(rs.next()) {
+                String SoTaiKhoan = rs.getString("SoTaiKhoan");
+                String HoTen = rs.getString("HoTen");
+                long SoTien = rs.getLong("SoTien");
+                String MatKhau =rs.getString("MatKhau");
+                tk = new taikhoanbean(SoTaiKhoan, HoTen, SoTien, MatKhau);
+            }
+            
+            rs.close();
+			   
+            return tk;
+	} catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+            return null;
+	}
+    }
+    
 }

@@ -23,15 +23,8 @@ public class MyClient {
 //            System.out.println("Hieu: " + tt.Tru(25,5));
 //            System.out.println("Tich: " + tt.Nhan(25,5));
 //            System.out.println("Thuong: " + tt.Chia(25,5));
-              KetNoi kn = new KetNoi();
-              taikhoandao tkd = new taikhoandao();
-              kn.KetNoi();
-              ArrayList<taikhoanbean> dstaikhoan= new ArrayList<taikhoanbean>();
               
-              dstaikhoan = tkd.gettaikhoan();
-              for (taikhoanbean item: dstaikhoan){
-                  System.out.println(item.getHoTen());
-              }
+            new FrmDangNhap().setVisible(true);
         }catch(Exception tt) {
             tt.printStackTrace();
         }
