@@ -5,12 +5,11 @@
         <group>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/FrmHienThi.java</file>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/MyClient.java</file>
-            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/FrmDangNhap.java</file>
+            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/TinhToan.java</file>
+            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/ITinhToan.java</file>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/FrmhtTaiKhoan.java</file>
             <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/MyServer.java</file>
-            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/dao/taikhoandao.java</file>
-            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/dao/KetNoi.java</file>
-            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/dao/chitiettaikhoandao.java</file>
+            <file>file:/D:/Workspace/LapTrinhPhanTan/Rmi_exam/src/FrmRuttien.java</file>
         </group>
     </open-files>
 </project-private>

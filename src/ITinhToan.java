@@ -2,6 +2,7 @@
 import bean.taikhoanbean;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.Date;
 
 public interface ITinhToan extends Remote{
     public int Cong(int a, int b) throws RemoteException;
@@ -10,7 +11,7 @@ public interface ITinhToan extends Remote{
     public int Chia(int a, int b) throws RemoteException;
     
     public taikhoanbean KtDn(String SoTaiKhoan, String MatKhau) throws Exception;
-    public taikhoanbean RutTien(String SoTaiKhoan, long SoTienRut) throws Exception;
-    public taikhoanbean ChuyenTien(String SoTaiKhoanChuyen, long SoTienChuyen, String SoTaiKhoanNhan) throws Exception;
+    public int RutTien(String SoTaiKhoan, long SoTienRut) throws Exception;
+    public int ChuyenTien(String SoTaiKhoanChuyen, long SoTienChuyen, String SoTaiKhoanNhan, Date ngaychuyen, String GhiChu) throws Exception;
     public taikhoanbean DoiMatKhau(String SoTaiKhoan, String MatKhauCu, String MatKhauMoi) throws Exception;
 }

@@ -15,8 +15,12 @@ import java.util.ArrayList;
  */
 public class taikhoanbo {
     ArrayList<taikhoanbean> ds;
+    taikhoandao tkdao = new taikhoandao();
     public void getds() {
-        taikhoandao tkdao = new taikhoandao();
         ds = tkdao.gettaikhoan();
+    }
+    
+    public int RutTien(long SoTienRut, String SoTaiKhoan) throws Exception {
+        return tkdao.Ruttien(SoTienRut, SoTaiKhoan);
     }
 }

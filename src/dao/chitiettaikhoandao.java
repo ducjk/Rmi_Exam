@@ -23,7 +23,6 @@ public class chitiettaikhoandao {
         cmd.setLong(2, SoTienRutRa);
         cmd.setString(3, SoTaiKhoan);
         cmd.setString(4, Ghichu);
-        
         return cmd.executeUpdate();
     }
 }

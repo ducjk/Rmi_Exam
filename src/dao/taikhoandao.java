@@ -69,4 +69,27 @@ public class taikhoandao {
 	}
     }
     
+    public int Ruttien(long SoTienRut, String SoTaiKhoan) throws Exception{
+        
+        String sql = "update TaiKhoan set SoTien = SoTien - ? where SoTaiKhoan = ?";
+	PreparedStatement cmd = KetNoi.cn.prepareStatement(sql);    
+        
+        cmd.setLong(1, SoTienRut);
+        cmd.setString(2, SoTaiKhoan);
+        
+        
+        return cmd.executeUpdate();
+    }
+    
+    public int CongTien(String SoTaiKhoan, long SoTienCong) throws Exception {
+        String sql = "update TaiKhoan set SoTien = SoTien + ? where SoTaiKhoan = ?";
+	PreparedStatement cmd = KetNoi.cn.prepareStatement(sql);    
+        
+        cmd.setLong(1, SoTienCong);
+        cmd.setString(2, SoTaiKhoan);
+        
+        
+        return cmd.executeUpdate();
+    }
+    
 }

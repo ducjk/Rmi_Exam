@@ -7,6 +7,7 @@
 
 import bean.taikhoanbean;
 import java.awt.Toolkit;
+import java.rmi.Naming;
 
 /**
  *
@@ -40,7 +41,6 @@ public class FrmHienThi extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(700, 500));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -70,11 +70,21 @@ public class FrmHienThi extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Rut tien");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(0, 0, 255));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("So du");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(0, 0, 255));
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -132,7 +142,7 @@ public class FrmHienThi extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    ITinhToan tt;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         int lebar = this.getWidth()/2;
@@ -140,11 +150,28 @@ public class FrmHienThi extends javax.swing.JFrame {
         int x = (Toolkit.getDefaultToolkit().getScreenSize().width/2)-lebar;
         int y = (Toolkit.getDefaultToolkit().getScreenSize().height/2)-tinggi;
         this.setLocation(x, y);
+        
+        try {
+            tt= (ITinhToan)Naming.lookup("rmi://localhost/TinhToan");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_formWindowOpened
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        new FrmChuyenTien(taikhoan).setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
+    
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        new FrmhtTaiKhoan(taikhoan).setVisible(true);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        new FrmRuttien(taikhoan).setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
