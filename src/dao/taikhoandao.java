@@ -92,4 +92,16 @@ public class taikhoandao {
         return cmd.executeUpdate();
     }
     
+    public int DoiMatKhau(String SoTaiKhoan, String MatKhauCu, String MatKhauMoi) throws Exception {
+        String sql = "update TaiKhoan set MatKhau = ? where SoTaiKhoan = ? and MatKhau = ?";
+	PreparedStatement cmd = KetNoi.cn.prepareStatement(sql);    
+        
+        cmd.setString(1, MatKhauMoi);
+        cmd.setString(2, SoTaiKhoan);
+        cmd.setString(3, MatKhauCu);
+        
+        
+        return cmd.executeUpdate();
+    } 
+    
 }

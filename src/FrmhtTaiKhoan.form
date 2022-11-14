@@ -42,7 +42,7 @@
                   <Component id="txttk" min="-2" pref="120" max="-2" attributes="0"/>
                   <Component id="txtsotien" alignment="0" min="-2" pref="120" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="253" max="32767" attributes="0"/>
+              <EmptySpace pref="228" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -64,7 +64,7 @@
                   <Component id="txtsotien" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="277" max="32767" attributes="0"/>
+              <EmptySpace pref="314" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

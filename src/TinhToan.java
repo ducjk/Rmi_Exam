@@ -6,6 +6,7 @@ import dao.taikhoandao;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class TinhToan extends UnicastRemoteObject implements ITinhToan{
@@ -61,8 +62,18 @@ public class TinhToan extends UnicastRemoteObject implements ITinhToan{
     }
 
     @Override
-    public taikhoanbean DoiMatKhau(String SoTaiKhoan, String MatKhauCu, String MatKhauMoi) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public int DoiMatKhau(String SoTaiKhoan, String MatKhauCu, String MatKhauMoi) throws Exception {
+        return tkdao.DoiMatKhau(SoTaiKhoan, MatKhauCu, MatKhauMoi);
+    }
+
+    @Override
+    public ArrayList<chitiettaikhoanbean> getdscttk(String taikhoan) throws Exception {
+        return cttk.getcttaikhoan(taikhoan);
+    }
+
+    @Override
+    public ArrayList<taikhoanbean> gettaikhoan() throws Exception {
+        return tkdao.gettaikhoan();
     }
     
 }

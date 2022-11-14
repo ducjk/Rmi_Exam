@@ -64,7 +64,12 @@ public class FrmHienThi extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(0, 0, 255));
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Thanh Toan");
+        jButton2.setText("Doi mat khau");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setBackground(new java.awt.Color(0, 0, 255));
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -90,6 +95,11 @@ public class FrmHienThi extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Lich su giao dich");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(0, 0, 255));
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
@@ -172,6 +182,16 @@ public class FrmHienThi extends javax.swing.JFrame {
         // TODO add your handling code here:
         new FrmRuttien(taikhoan).setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        new FrmLichSu(taikhoan).setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        new FrmDoiMatKhau(taikhoan).setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments

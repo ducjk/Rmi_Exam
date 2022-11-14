@@ -4,6 +4,7 @@ import dao.taikhoandao;
 import java.awt.Toolkit;
 import java.rmi.Naming;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 
@@ -130,7 +131,19 @@ public class FrmChuyenTien extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "So du cua ban khong du de thuc hien giao dich");
                 dispose();
             }
-            else {
+            ArrayList<taikhoanbean> dstaikhoan = tt.gettaikhoan();
+            int kt = 0;
+            for (taikhoanbean item:dstaikhoan){
+                if (item.getSoTaiKhoan().equals(SoTaiKhoanChuyen)){
+                    kt = 1;
+                    break;
+                }
+            }
+            if (kt == 0){
+                JOptionPane.showMessageDialog(null, "So tai khoan chuyen khong ton tai");
+            }
+            if (kt == 1){
+                
                 if (GhiChu == null){
                     GhiChu = "Chuyen Tien";
                 }
